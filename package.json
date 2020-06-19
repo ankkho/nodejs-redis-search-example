@@ -1,0 +1,55 @@
+{
+  "name": "nodejs-redis-search-example",
+  "version": "1.0.0",
+  "description": "A simple example of implementing redis-search with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-per:ankkho/nodejs-redis-search-example.git"
+  },
+  "keywords": [
+    "nodejs",
+    "redis-search"
+  ],
+  "dependencies": {
+    "@babel/node": "^7.8.7",
+    "@babel/runtime": "^7.9.6",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.3",
+    "koa-bodyparser": "^4.3.0",
+    "koa-respond": "^2.1.0",
+    "koa-router": "^8.0.8",
+    "redis": "^3.0.2",
+    "redis-redisearch": "^1.0.1",
+    "redisearchclient": "^1.0.1",
+    "redredisearch": "^0.0.1",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-flow-strip-types": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/plugin-transform-typescript": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.4",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "author": "Ankit Khosla",
+  "license": "ISC"
+}
