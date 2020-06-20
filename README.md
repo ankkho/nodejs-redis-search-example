@@ -1,2 +1,11 @@
 # nodejs-redis-search-example
-A simple example repo related to redis-search
+
+### Use redis Search with nodejs.
+
+> git clone 
+
+> cd nodejs-redis-search-example
+
+> yarn
+
+> docker-compose up --build
