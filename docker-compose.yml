@@ -14,12 +14,7 @@ services:
     ports:
       - 3000:3000
     restart: always
-    command:
-      - /bin/bash
-      - -c
-      - | 
-        yarn createIndex 
-        yarn start:dev
+    command: bash -c 'yarn createIndex && yarn start:dev'
     environment:
       NODE_ENV: dev
       REDIS_HOST: redis-search

@@ -39,19 +39,23 @@ const books = [{
   rating: 3
 }]
 
-const addRecords = () => books.map((val, index) => {
-  redisSearch.add(indexName, val, (err, resp) => {
-    if (err) {
+const addRecords = (val) => {
+  const { id, title } = val
+
+  redisSearch.add(id, val, (err, resp) => {
+    if (err && err.length) {
       logger.error("Error occured while adding records to index: ", err)
     }
-    const { id, title } = val
-    logger.info(`Book with title: ${title} and ID: ${id} has been added to index`)
 
-    if (index === 5) {
+    if (resp === "OK") {
+      logger.info(`Book with title: ${title} and ID: ${id} has been added to index`)
+    }
+
+    if (resp === "OK" && id === 6) {
       process.exit(0)
     }
   })
-})
+}
 
 redisSearch.createIndex([
   redisSearch.fieldDefinition.numeric('id', false),
@@ -60,11 +64,14 @@ redisSearch.createIndex([
   redisSearch.fieldDefinition.text('summary'),
   redisSearch.fieldDefinition.text('authorName')
 ], (err, resp) => {
-  if (err) {
+  if (err && err.length) {
     logger.error('Error occured while creating index:', err)
   }
   logger.info(`Index with name: ${indexName} has been created`, resp)
-  addRecords()
+
+  books.map((val, _) => {
+    addRecords(val)
+  })
 })
 
 
