@@ -24,7 +24,7 @@
     "koa-respond": "^2.1.0",
     "koa-router": "^9.0.1",
     "pino": "^6.3.2",
-    "redis": "^3.0.2",
+    "redis": "^3.1.1",
     "redis-redisearch": "^1.0.1",
     "redisearchclient": "^1.0.1",
     "redredisearch": "^0.0.1",
